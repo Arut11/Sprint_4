@@ -2,9 +2,9 @@
 package ru.services.praktikum.scooter.pageobject.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
         //Блок "Вопросы о важном"
@@ -21,10 +21,10 @@ public class QuestionsAboutImportantThingsPage extends BasePage {
     }
 
     //Клик по вопросу
-    public void clickQuestionButton(int index) {
-        wait.until(ExpectedConditions.elementToBeClickable(getQuestionButton(index))).click();
-
-    }
+public void clickQuestionButton(int index) {
+    WebElement button = driver.findElements(By.xpath("//*[@class='accordion__button']")).get(index);
+    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
+}
 
     //Получаю текст ответа
     public String checkAnswerText(int index) {

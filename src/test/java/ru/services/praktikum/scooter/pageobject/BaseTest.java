@@ -18,7 +18,7 @@ public class BaseTest {
     @Before
     public void setUpDriver() {
 
-        driver = getDriver("chrome");
+        driver = getDriver("firefox");
         driver.manage().window().maximize();
         driver.get(MainPage.URL);
 
@@ -43,7 +43,7 @@ public class BaseTest {
             case "chrome":
                 WebDriverManager.chromedriver().driverVersion("126.0.6478.126").setup();
                 return new ChromeDriver();
-            case "Firefox":
+            case "firefox":
                 FirefoxOptions options = new FirefoxOptions();
                 options.addPreference("browser.startup.homepage", "about:blank");
 

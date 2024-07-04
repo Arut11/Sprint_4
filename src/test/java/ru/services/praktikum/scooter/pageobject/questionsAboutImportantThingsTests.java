@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import ru.services.praktikum.scooter.pageobject.pages.QuestionsAboutImportantThingsPage;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 //Тесты выпадающих списков раздела "Вопросы о важном"
@@ -41,7 +42,7 @@ public class questionsAboutImportantThingsTests extends BaseTest {
         QuestionsAboutImportantThingsPage questionsAboutImportantThingsPage = new QuestionsAboutImportantThingsPage(driver);
         int index = questionsAboutImportantThingsPage.findQuestionIndex(questionsAboutImportantThingsPage, question);
 
-        if (index != -1) {
+        assertTrue(index != -1);
             questionsAboutImportantThingsPage.clickQuestionButton(index);
 
             String result = questionsAboutImportantThingsPage.checkAnswerText(index);
@@ -50,4 +51,4 @@ public class questionsAboutImportantThingsTests extends BaseTest {
         }
     }
 
-}
+

@@ -40,9 +40,9 @@ public class MainPage extends BasePage {
 
     //Метод клика по кнопке "Заказать"
     public void clickCreateOrderButton(Enum button) {
-        if (button.equals(BUTTON_1)) {
+        if (button.equals(UP_BUTTON)) {
             clickUpOrderButton();
-        } else if (button.equals(BUTTON_2)) {
+        } else if (button.equals(BUTTON_DOWN)) {
             scrollToDownOrderButton();
             clickDownOrderButton();
         }

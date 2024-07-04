@@ -46,10 +46,10 @@ public class orderingScooterTests extends BaseTest {
     @Parameterized.Parameters
     public static Object[][] getParameters() {
         return new Object[][]{
-                {BUTTON_1, "Тест", "Тестовый", "Тестовая 1", 123, "79991111111", "28.05.2023", ONE_DAY, GREY, "comments one"},
-                {BUTTON_1, "Имя Два", "Фамилия", "Адрес 2", 7, "79992222222", "28.05.2023", SEVEN_DAYS, BLACK, "comments two"},
-                {BUTTON_2, "Имя Один", "Фамилия", "Адрес 1", 123, "79991111111", "28.05.2023", ONE_DAY, GREY, "comments one"},
-                {BUTTON_2, "Имя Два", "Фамилия", "Адрес 2", 7, "79992222222", "28.05.2023", SEVEN_DAYS, BLACK, "comments two"},
+                {UP_BUTTON, "Тест", "Тестовый", "Тестовая 1", 123, "79991111111", "28.05.2023", ONE_DAY, GREY, "comments one"},
+                {UP_BUTTON, "Имя Два", "Фамилия", "Адрес 2", 7, "79992222222", "28.05.2023", SEVEN_DAYS, BLACK, "comments two"},
+                {BUTTON_DOWN, "Имя Один", "Фамилия", "Адрес 1", 123, "79991111111", "28.05.2023", ONE_DAY, GREY, "comments one"},
+                {BUTTON_DOWN, "Имя Два", "Фамилия", "Адрес 2", 7, "79992222222", "28.05.2023", SEVEN_DAYS, BLACK, "comments two"},
         };
     }
 
